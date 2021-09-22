@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View your Data</title>
+</head>
+<body>
+<h2> Database </h2>
+
+<table>
+         <thead>
+            <tr>
+               <th>camera_view</th>
+               <th>company_id</th>
+               <th>description</th>
+               <th>created_time</th>
+                <th>camera_id</th>
+               <th>model_version</th>
+               <th>is_violation</th>
+               <th>img_path</th>
+                <th>out_data</th>
+               <th>prediction_time</th>
+               <th>is_buzzer_start</th>
+
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for data in database_values %}
+               <tr>
+                  <td>{{ data.camera_view }}</td>
+                  <td>{{ data.company_id }}</td>
+                  <td>{{ data.description }}</td>
+                  <td>{{ data.created_time }}</td>
+                   <td>{{ data.camera_id }}</td>
+                  <td>{{ data.model_version }}</td>
+                  <td>{{ data.is_violation }}</td>
+                  <td>{{ data.img_path }}</td>
+                   <td>{{ data.out_data }}</td>
+                  <td>{{ data.prediction_time }}</td>
+                  <td>{{ data.is_buzzer_start }}</td>
+
+               </tr>
+
+<!--            camera_view=camera_view, company_id=company_id, description=description,-->
+<!--                               created_time=created_time, camera_id= camera_id, model_version= model_version,-->
+<!--                               is_violation= is_violation, img_path= img_path, out_data= out_data,-->
+<!--                               prediction_time= prediction_time, is_buzzer_start= is_buzzer_start-->
+
+            {% endfor %}
+         </tbody>
+      </table>
+
+</body>
+</html>

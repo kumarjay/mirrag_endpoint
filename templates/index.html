@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome !!!!</title>
+</head>
+<body>
+
+
+<h2> HEllo World !</h2>
+<h2>How are you ?</h2>
+<br>
+
+{% if message %}
+        <p><strong>Whola </strong>: {{message}}</p>
+    {% endif %}
+<br>
+<form action="view_data" method="post">
+    <button name="foo" value="fetchData">Fetch Data</button>
+</form>
+<br>
+<form action="data_form" method="post">
+    <button name="foo" value="pushData">Upload Data</button>
+</form>
+
+</body>
+</html>
